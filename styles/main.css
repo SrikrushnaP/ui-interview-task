@@ -16,3 +16,122 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+
+.testimonials-section {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+.testimonials-section h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.testimonials-section p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #b3b2c9;
+}
+
+/* Container for testimonials */
+.testimonials-container {
+    margin-left: -12.5%;
+    margin-right: -15%;
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: flex-start;
+    height: 100%;
+    /* Full height */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    /* Smooth scroll */
+    transition: transform 0.6s ease-in-out;
+    /* Smooth transition for transform */
+}
+
+.testimonial-card {
+    font-family: 'Poppins', sans-serif;
+    height: 300px;
+    padding: 20px;
+    background-color: #353343;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 calc(20.5% - 20px);
+}
+
+.testimonial-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f8f8f8;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b3b2c9;
+    /* Light grey text */
+}
+
+/* Apply animation to odd and even cards */
+.testimonial-card:nth-child(odd) {
+    animation: moveUpDown 10s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.testimonial-card:nth-child(even) {
+    animation: moveDownUp 10s ease-in-out infinite;
+    animation-play-state: running;
+}
+
+.testimonial-card:hover {
+    border: 1px solid #ffffff;
+    /* Hover effect */
+}
+
+/* Keyframe animation for moving testimonials up and down */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(100px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes moveDownUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
