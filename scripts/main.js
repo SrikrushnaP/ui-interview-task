@@ -49,7 +49,17 @@ document.querySelectorAll('.testimonial-card').forEach(card => {
         startAutoScroll();
         startStopKeyFrameAnimation("running")
     });
-    
+
 });
 
+// TODO
+// document.querySelectorAll('.testimonial-card')[0].addEventListener('animationiteration', () => {
+//     currentAnimationCount = 0
+//     animationCount++; // Increment the count
+//     console.log("animationCount", animationCount)
 
+//     setTimeout(() => {
+//         stopAutoScroll();
+//         startStopKeyFrameAnimation("paused")
+//     }, 1000); 
+// });
